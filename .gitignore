@@ -40,3 +40,10 @@ build/
 ### OS Specific ###
 .DS_Store
 Thumbs.db
+
+
+
+.gitattributes
+.mvn
+mvnw
+mvnw.cmd
