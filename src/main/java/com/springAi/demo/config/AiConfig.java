@@ -36,9 +36,10 @@ public class AiConfig {
                 .apiKey(connectionDetails.getApiKey())
                 .build();
 
+
         var options = GoogleGenAiTextEmbeddingOptions.builder()
-                .model(googleGenAiProperties.getModel())
-                .dimensions(googleGenAiProperties.getEmbeddingDimensions())
+                .model(googleGenAiProperties.getEmbedding().getOptions().getModel())
+                .dimensions(googleGenAiProperties.getEmbedding().getOptions().getDimensions())
                 .build();
 
         return new GoogleGenAiTextEmbeddingModel(client, options);

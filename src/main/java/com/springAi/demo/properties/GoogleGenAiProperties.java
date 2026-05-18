@@ -1,6 +1,7 @@
 package com.springAi.demo.properties;
-import org.springframework.boot.context.properties.ConfigurationProperties;
+
 import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
 @ConfigurationProperties(prefix = "spring.ai.google.genai")
@@ -11,10 +12,6 @@ public class GoogleGenAiProperties {
     private String projectId;
 
     private String model;
-
-    private Integer embeddingDimensions;
-
-    private String embeddingModel;
 
     private Chat chat = new Chat();
 
@@ -41,6 +38,8 @@ public class GoogleGenAiProperties {
         public static class Options {
 
             private String model;
+
+            private Integer dimensions;
         }
     }
 }
